@@ -35,7 +35,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          pytest -q
+          PYTHONPATH="$GITHUB_WORKSPACE" pytest -q
 
   package:
     name: Create Tarball Artifact
