@@ -63,7 +63,6 @@ Ctrl + C
 Your terminal will return to the command input
 
 <code style="color : Red">:rocket: Well Done you just run a Python application</code>
-## Step 3 Pipelines & Git
 
 ## Step 2: Setup Podman
 6) Check Podman is running:
@@ -199,7 +198,7 @@ If you want to pull down new changes from the source Github repo to your local v
 2. Check current remotes (git remote -v)
 3. Add User A as second remote (git remote add upstream https://github.com/userA/DevOps-training-processes.git)
 4. Check current remotes (git remote -v). You will see 2 origin rows and 2 upstream rows
-5. Fetcch changes from userA (git fetch upstream)
+5. Fetch changes from userA (git fetch upstream)
 6. Merge UserA changes into local branch (git checkout main)
 7. Merge (git merge upstream/main) (if confliects run git add . then git commit)
 8. Push up to UserB (git push origin main)
