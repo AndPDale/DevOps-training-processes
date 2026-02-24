@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scoreboard Demo</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Scoreboard Demo</h1>
+    <p class="sub">A tiny app for Git + Podman + GitHub Actions.</p>
+
+    <form method="POST" action="/score" class="grid">
+      <label>
+        Name
+        <input name="name" placeholder="e.g. Sam" value="{{ name or '' }}" />
+      </label>
+
+      <label>
+        Points
+        <input name="points" type="number" min="0" value="{{ points if points is not none else 10 }}" />
+      </label>
+
+      <label>
+        Multiplier
+        <input name="multiplier" type="number" min="0" value="{{ multiplier if multiplier is not none else 2 }}" />
+      </label>
+
+      <button type="submit">Calculate score</button>
+    </form>
+
+    {% if result %}
+      <div class="ok">{{ result }}</div>
+    {% endif %}
+
+    {% if error %}
+      <div class="err">{{ error }}</div>
+    {% endif %}
+
+    <hr />
+
+    <h2>Quick API checks</h2>
+    <ul>
+      <li><a href="/api/health" target="_blank">/api/health</a></li>
+      <li><a href="/api/score?points=10&multiplier=2" target="_blank">/api/score?points=10&multiplier=2</a></li>
+    </ul>
+  </main>
+</body>
+</html>
