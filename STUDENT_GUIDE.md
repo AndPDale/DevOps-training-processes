@@ -62,7 +62,7 @@ Ctrl + C
 ```
 Your terminal will return to the command input
 
-<code style="color : Red">:rocket: Well Done you just run a Python application</code>
+<code style="color : Red">🚀  Well Done you just run a Python application</code>
 
 ## Step 2: Setup Podman
 6) Check Podman is running:
@@ -132,7 +132,7 @@ podman stop demo
 ```
 podman rm demo
 ```
-<code style="color : Red">:rocket: Well Done you just containerised the application</code>
+<code style="color : Red">🚀  Well Done you just containerised the application</code>
 ## Step 3 Pipelines & Git
 
 14) Navigate to Github.com and login
@@ -189,7 +189,7 @@ Your code has now been pushed up to your Github Account
 
 20.3) On completion you should see a Green ticked workflow. Click into it to see the tests run image tar ball creation
 
-<code style="color : Red">:rocket: Well Done you just ran a pipeline with a test and image tar creation</code>
+<code style="color : Red">🚀  Well Done you just ran a pipeline with a test and image tar creation</code>
 
 ### Additional steps
 
