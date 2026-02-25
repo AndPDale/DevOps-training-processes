@@ -102,7 +102,7 @@ podman build -t scoreboard-demo .
 ```
 podman images
 ```
-You will expect to see a localhost/scoreboard-demo image with teh tag of latest created minutes before 
+You will expect to see a localhost/scoreboard-demo image with the tag of latest created minutes before 
 
 11) Create and start your container from the image scoreboard-demo
 * Running it in the background 
@@ -179,7 +179,7 @@ Expected output
 
 18) Add your new Github account remote
 ```
-git remote add origin https://github.com/<your username>/DevOps-training-processes.git
+git remote add origin https://github.com/your username/DevOps-training-processes.git
 ```
 If you provided a different  name for your new repository in your user, use that instead of DevOps-training-processes
 
