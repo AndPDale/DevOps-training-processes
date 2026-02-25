@@ -23,6 +23,7 @@
 ## Run a Python Application
 <details open>
 <summary>Step 1: Clone the repo</summary>
+
 1) Open Git bash and navigate to your desktop
 ```
 cd ~/desktop
