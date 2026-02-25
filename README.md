@@ -151,7 +151,7 @@ podman rm demo
 1. Select the hamburger menu top left 
 2. Select Repositories
 2. Select 'New repository' on the right hand side
-3. Enter the repository name 
+3. Enter the repository name - call it DevOps-training-processes
 4. Keep provided defaults
 5. Select 'Create repository' button
 
@@ -181,6 +181,8 @@ Expected output
 ```
 git remote add origin https://github.com/<your username>/DevOps-training-processes.git
 ```
+If you provided a different  name for your new repository in your user, use that instead of DevOps-training-processes
+
 > If this errors with 'remote origin already exists' a different user already exists. Run "git remote remove origin" and try again
 
 19) Push the code to your new Github Account
