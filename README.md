@@ -73,7 +73,7 @@ Your terminal will return to the command input
 
 6) Check Podman is running:
 ```
-podman version
+podman --version
 ```
 Expected output: podman version 5.8.0
 
