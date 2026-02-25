@@ -108,7 +108,7 @@ You will expect to see a localhost/scoreboard-demo image with the tag of latest 
 * Running it in the background 
 * Exposing it on port 8080 of your host.
 ```
-podman run -d --name demo -p 8080:5000 scoreboard-demo
+podman run -d --name demo --network host scoreboard-demo
 ```
 > The hexadecimal value returned is the container ID
 
@@ -125,7 +125,7 @@ podman ps
 podman logs -f demo
 ```
 12) Open in browser yor containerised application the browser:
-[http://127.0.0.1:8000](http://127.0.0.1:8000)
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
 > Depending on port forwarding, mixed results have been seen with the application displaying in the browser. 
 > Continue to the next stage when ready
 
