@@ -20,8 +20,9 @@
 > If you have installed any tooling please ensure that you have restarted your system before proceeding with any of the steps below
 
 ---
-
-## Step 1: Clone the repo
+## Run a Python Application
+<details open>
+<summary>Step 1: Clone the repo</summary>
 1) Open Git bash and navigate to your desktop
 ```
 cd ~/desktop
@@ -63,8 +64,11 @@ Ctrl + C
 Your terminal will return to the command input
 
 <code style="color : Red">🚀  Well Done you just run a Python application</code>
+</details>
 
-## Step 2: Setup Podman
+## Containerise your application
+<details>
+<summary>Step 2: Setup Podman</summary>
 6) Check Podman is running:
 ```
 podman version
@@ -133,7 +137,11 @@ podman stop demo
 podman rm demo
 ```
 <code style="color : Red">🚀  Well Done you just containerised the application</code>
-## Step 3 Pipelines & Git
+</details>
+
+## Create and run your pipeline
+<details>
+<summary>Step 3 Pipelines & Git</summary>
 
 14) Navigate to Github.com and login
 
@@ -190,9 +198,62 @@ Your code has now been pushed up to your Github Account
 20.3) On completion you should see a Green ticked workflow. Click into it to see the tests run image tar ball creation
 
 <code style="color : Red">🚀  Well Done you just ran a pipeline with a test and image tar creation</code>
+</details>
+
+## (Optional) Git Commit a code change
+
+<details>
+<summary>🚀 Git Workflow – Create Branch, Commit and Push</summary>
+
+In this section we will cover how you can push up a local change to a Github Repository
+
+1) Create a new branch (create a new branch and swithces to it)
+```
+git push -u origin main
+```
+
+2) Make the required changes to your files
+
+3) Check the status of Git
+```
+git status
+```
+3.1) See detailed lines changed
+```
+git diff
+```
+4) Stage your changes
+To stage all changes
+```
+git add .
+```
+or stage a specific file
+```
+git add README.md
+```
+5) Commit your changes with a message detailing the change
+```
+git commit -m "Update README with pipeline instructions
+```
+6) Push the branch to GitHub
+```
+git push -u origin feature/update-readme
+```
+```-u``` flag here sets the upstream branch so next time you can just run:
+```
+git push
+```
+✅ What Happens Next?
+* Go to your GitHub repository
+* Click Compare & pull request
+* Create the Pull Request
+* Merge once you are happy with the change
+* Your feature/update-readme branch can then me deleted as the change has been merged into main
+</details>
 
 ### Additional steps
-
+<details>
+<summary>Pull new changes from source repository</summary>
 If you want to pull down new changes from the source Github repo to your local version and then push up to your Github repo (Pull change from source User A > Local copy > Push up to User B)
 1. Open local repo
 2. Check current remotes (git remote -v)
@@ -203,3 +264,4 @@ If you want to pull down new changes from the source Github repo to your local v
 7. Merge (git merge upstream/main) (if confliects run git add . then git commit)
 8. Push up to UserB (git push origin main)
 9. UserB workflow will now run
+</details>
