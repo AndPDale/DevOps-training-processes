@@ -70,6 +70,7 @@ Your terminal will return to the command input
 ## Containerise your application
 <details>
 <summary>Step 2: Setup Podman</summary>
+
 6) Check Podman is running:
 ```
 podman version
