@@ -68,7 +68,7 @@ Your terminal will return to the command input
 </details>
 
 ## Containerise your application
-<details>
+<details open>
 <summary>Step 2: Setup Podman</summary>
 
 6) Check Podman is running:
@@ -142,7 +142,7 @@ podman rm demo
 </details>
 
 ## Create and run your pipeline
-<details>
+<details open>
 <summary>Step 3 Pipelines & Git</summary>
 
 14) Navigate to Github.com and login
