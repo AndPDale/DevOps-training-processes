@@ -58,11 +58,11 @@ python ./app.py
 http://127.0.0.1:5000/api/health
 http://127.0.0.1:5000/api/score?points=10&multiplier=2
 
-5) Return to Git Bash to stop the app with:
+5) Return to Git Bash and stop the application running with the following keyboard buttons:
 ```
-Ctrl + C
+Control (Ctrl) key followed by C key
 ```
-Your terminal will return to the command input
+Your terminal will exit out of running the python application and return to the command input ready for input
 
 <code style="color : Red">🚀  Well Done you just run a Python application</code>
 </details>
@@ -75,7 +75,7 @@ Your terminal will return to the command input
 ```
 podman --version
 ```
-Expected output: podman version 5.8.0
+Expected output: podman version x.x.x
 
 7) Check that you have no Podman virtual machines running
 ```
@@ -93,7 +93,9 @@ podman machine init
 ```
 podman machine start
 ```
-10) Build a container image from the Containerfile in the current directory and tag it  scoreboard-demo
+10) Build a container image from the Containerfile in the current directory and tag it scoreboard-demo
+
+> Note the . on the end of the command
 ```
 podman build -t scoreboard-demo .
 ```
@@ -106,7 +108,7 @@ You will expect to see a localhost/scoreboard-demo image with the tag of latest 
 
 11) Create and start your container from the image scoreboard-demo
 * Running it in the background 
-* Exposing it on port 8080 of your host.
+* Exposing it on network host port of your host.
 ```
 podman run -d --name demo --network host scoreboard-demo
 ```
@@ -116,7 +118,7 @@ podman run -d --name demo --network host scoreboard-demo
 ```
 podman ps
 ```
-> Expected output is a single line with the image localhost/scoreboard-demo:latest with a Status of UP
+> Expected output is a single line with the image localhost/scoreboard-demo:latest with a Status of UP. 
 > Rerunning the command should return the same result with an incremental status time.
 > Confirming the container is running successfully
 
@@ -145,10 +147,10 @@ podman rm demo
 <details open>
 <summary>Step 3 Pipelines & Git</summary>
 
-14) Navigate to Github.com and login
+14) Navigate to Github.com and login with your personal account
 
 15) Create a new repository
-1. Select the hamburger menu top left 
+1. Select the hamburger menu top left (three horizontal lines)
 2. Select Repositories
 2. Select 'New repository' on the right hand side
 3. Enter the repository name - call it DevOps-training-processes
@@ -175,13 +177,13 @@ Expected output
 8. Under Permissions section, select +Add permissions and choose Actions, Contents & Workflows
 9. For each permission change access to Read and Write
 10. Generate token
-7. Copy it immediately and make a note in a password manager for example
+7. Copy it immediately and make a note in a password manager for example. This value is only visible once
 
-18) Add your new Github account remote
+18) Add your new Github account remote in your terminal
 ```
 git remote add origin https://github.com/your username/DevOps-training-processes.git
 ```
-If you provided a different  name for your new repository in your user, use that instead of DevOps-training-processes
+If you provided a different name for your new repository in your user acocunt, use that instead of DevOps-training-processes
 
 > If this errors with 'remote origin already exists' a different user already exists. Run "git remote remove origin" and try again
 
@@ -195,11 +197,13 @@ Your code has now been pushed up to your Github Account
 
 20) Log into your Github account and navigate to the new repository
 
-20.1) Select Actions tab and observe under the Workflows section that an automated test has run. This was triggered by your push to Github
+20.1) Select Actions tab and observe under the Workflows section that an automated test has run. This was triggered by your push to Github (step 19)
 
-20.2) The Pipeline will now run a basic test and create an image of your application
+20.2) The Pipeline will now run a basic test and create an image (file) of your application
 
-20.3) On completion you should see a Green ticked workflow. Click into it to see the tests run image tar ball creation
+20.3) On completion you should see a Green ticked workflow. Click into it to see the tests run on the code and the resulting image tar ball creation
+
+> In a real world scenario the created image file could be application you are deploying to production
 
 <code style="color : Red">🚀  Well Done you just ran a pipeline with a test and image tar creation</code>
 </details>
@@ -209,16 +213,20 @@ Your code has now been pushed up to your Github Account
 <details>
 <summary>🚀 Git Workflow – Create Branch, Commit and Push</summary>
 
-In this section we will cover how you can push up a local change to a Github Repository
+In this section we will cover how you can push up a locally made (on your laptop) change to a Github Repository for code storage
 
-1) Create a new branch (create a new branch and swithces to it)
+1) Create a new branch (create a new branch and switches to it)
+
+> A branch is a copy of the code on which you make a change. When finished you push back to Github.com, get approval and then merge (add) your change to the main (source of truth) code set.
 ```
 git push -u origin main
 ```
 
-2) Make the required changes to your files
+2) Make the required changes to your files and save
 
 3) Check the status of Git
+
+> See what has changed and needs pushing up to Github.com code set
 ```
 git status
 ```
@@ -227,6 +235,9 @@ git status
 git diff
 ```
 4) Stage your changes
+
+> Add the change to a basket containing all the changes you want adding to the source of true code
+
 To stage all changes
 ```
 git add .
@@ -237,7 +248,7 @@ git add README.md
 ```
 5) Commit your changes with a message detailing the change
 ```
-git commit -m "Update README with pipeline instructions
+git commit -m "Update README with pipeline instructions"
 ```
 6) Push the branch to GitHub
 ```
@@ -258,6 +269,7 @@ git push
 ### Additional steps
 <details>
 <summary>Pull new changes from source repository</summary>
+  
 If you want to pull down new changes from the source Github repo to your local version and then push up to your Github repo (Pull change from source User A > Local copy > Push up to User B)
 1. Open local repo
 2. Check current remotes (git remote -v)
@@ -268,4 +280,5 @@ If you want to pull down new changes from the source Github repo to your local v
 7. Merge (git merge upstream/main) (if confliects run git add . then git commit)
 8. Push up to UserB (git push origin main)
 9. UserB workflow will now run
+
 </details>
